@@ -247,6 +247,26 @@ public class PatternAdvance {
         }
         */ 
         
+        // Palendrome Like Pattern
+        System.out.println("Enter no. of rows ");
+        int n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= (n-i); j++) {
+                System.out.print(" ");
+            }
+            int count = 1;
+            for (int j = 1; j <= (2*i-1); j++) {
+                while (count>1) {
+                    System.out.print(count);
+                    count--;
+                }
+                while (count == 1 || count <= i) {
+                    count++;
+                    System.out.print(count);
+                }
+            }
+            System.out.println();
+        }
         sc.close();
     }
 }
